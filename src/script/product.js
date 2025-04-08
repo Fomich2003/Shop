@@ -179,6 +179,6 @@ function renderComments(productComments) {
 
   })
 } 
-//
+
 
 calcRange()
