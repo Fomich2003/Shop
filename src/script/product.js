@@ -178,6 +178,7 @@ function renderComments(productComments) {
             </div>`
 
   })
-}
+} 
+//
 
 calcRange()
