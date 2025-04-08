@@ -1,0 +1,31 @@
+@import url("./style.css");
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./cart.css");
+
+.category {
+	padding: 60px 0;
+}
+
+.category h1 {
+	margin-bottom: 30px;
+}
+
+.category__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+@media all and (max-width: 760px) {
+.category {
+	padding: 40px 0;
+}
+.category-card {
+	width: calc(50% - 5px);
+}
+.catalog-card .product-card {
+	max-width: 100%;
+	width: 100%;
+}
+}

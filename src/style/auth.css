@@ -1,0 +1,51 @@
+@import url("./style.css");
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./cart.css");
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.auth__wrapper {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 80px 0;
+}
+
+.auth__wrapper form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.auth__wrapper h2 {
+	margin-bottom: 20px;
+}
+
+.auth__wrapper input,
+.auth__wrapper button {
+	display: block;
+	padding: 0 10px;
+	font-size: 16px;
+	height: 42px;
+	border-radius: 10px;
+	border: 1px solid black;
+	outline: none;
+}
+
+.auth__wrapper button {
+	cursor: pointer;
+}
+
+.form-message {
+	display: none;
+	color: red;
+}
+
+/* footer {
+	margin-top: auto;
+} */

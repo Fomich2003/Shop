@@ -7,6 +7,7 @@ footer {
     display: flex;
     justify-content: space-between;
     color: white;
+    flex-wrap: wrap;
 }
 
 .footer__left-nav {

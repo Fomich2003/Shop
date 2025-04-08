@@ -14,35 +14,34 @@
 </head>
 
 <body>
-
 	<header>
 		<div class="container">
 			<div class="header__wrapper">
 				<div class="logo">
-					<a href="#">
+					<a href="/">
 						<img src="./src/favicons/favicon-32x32.png" alt="logo">
 					</a>
 				</div>
 				<nav>
-					<a href="#">Головна</a>
+					<a href="/">Головна</a>
 					<details>
 						<summary>Категорії</summary>
 						<div class="header__categories">
-							<a href="#">Смартфони</a>
-							<a href="#">Планшети</a>
+							<a href="./src/pages/category.html?category=Смартфони">Смартфони</a>
+							<a href="./src/pages/category.html?category=Планшети">Планшети</a>
 						</div>
 					</details>
 					<a href="#">Про нас</a>
 					<a href="#">Контакти</a>
 				</nav>
 				<div class="header__extra">
-					<div class="header__basket">
-						<a href="#">
+					<div class="header__basket" id="open-cart">
+						<a>
 							<img src="./src/icons/basket-svgrepo-com.svg" alt="basket__logo">
 						</a>
 					</div>
 					<div class="header__profile">
-						<a href="#">
+						<a href="/src/pages/profile.html">
 							<img src="./src/icons/profile-svgrepo-com.svg" alt="profile__logo">
 						</a>
 					</div>
@@ -54,14 +53,12 @@
 				</div>
 			</div>
 		</div>
-
-
 	</header>
 
 	<main>
 		<section class="hero">
 
-			<div class="swiper mySwiper">
+			<div class="swiper swiper__hero">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<a href="#">
@@ -85,7 +82,7 @@
 			<div class="container">
 				<h2>Популярні категорії</h2>
 				<div class="categories__wrapper">
-					<a href="" class="categories__item">
+					<a href="/src/pages/category.html?category=Смартфони" class="categories__item">
 						<img src="./src/img/phone-cat.png" alt="Categories-Phone">
 						<div class="categories__item-right">
 							<h3>Смартфони</h3>
@@ -94,7 +91,7 @@
 						</div>
 					</a>
 
-					<a href="" class="categories__item">
+					<a href="/src/pages/category.html?category=Планшети" class="categories__item">
 						<img src="./src/img/Apple_iPad-cut.png" alt="Categories-Laptop">
 						<div class="categories__item-right">
 							<h3>Планшети</h3>
@@ -104,9 +101,48 @@
 					</a>
 				</div>
 				<div class="categories__all-products">
-					<a href="">Усі товари</a>
+					<a href="/src/pages/category.html?category=">Каталог</a>
 				</div>
 			</div>
+		</section>
+
+		<section id="top-rated" class="top-cards">
+			<div class="container">
+				<h2>Акційні товари</h2>
+				<div class="top-cards_wrapper">
+					<div class="swiper product__slider swiper__top-cards">
+						<div class="swiper-wrapper">
+
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+		</section>
+
+		<section id="top-phones" class="top-cards">
+			<div class="container">
+				<h2>Смартфони</h2>
+				<div class="top-cards_wrapper">
+					<div class="swiper product__slider swiper__top-phones">
+						<div class="swiper-wrapper">
+
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+		</section>
+
+		<section id="top-tablets" class="top-cards">
+			<div class="container">
+				<h2>Планшети</h2>
+				<div class="top-cards_wrapper">
+					<div class="swiper product__slider swiper__top-tablets">
+						<div class="swiper-wrapper">
+
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
 		</section>
 
 		<section class="advantages">
@@ -139,10 +175,13 @@
 
 					<div class="about-us-text">
 						<h2>Про нас</h2>
-						<p>Ми — інноваційний електронний магазин, що пропонує найновіші гаджети для покращення вашого
-							життя. У Future Tech ми обираємо тільки найкращі пристрої, які допомагають вам бути на крок
+						<p>Ми — інноваційний електронний магазин, що пропонує найновіші гаджети для покращення
+							вашого
+							життя. У Future Tech ми обираємо тільки найкращі пристрої, які допомагають вам бути
+							на крок
 							попереду у світі технологій.</p>
-						<p>Наша мета — зробити передові гаджети доступними для кожного. Ми надаємо високоякісні продукти
+						<p>Наша мета — зробити передові гаджети доступними для кожного. Ми надаємо високоякісні
+							продукти
 							за вигідними цінами та забезпечуємо бездоганний сервіс, щоб ви могли насолоджуватися
 							технологічними досягненнями без проблем.</p>
 						<a href="#" class="btn">Зв'язатися з нами</a>
@@ -156,6 +195,21 @@
 
 	</main>
 
+	<div class="cart">
+		<div class="cart-window">
+			<div class="cart-top">
+				<h2>Корзина</h2>
+				<button class="cart-close">✕</button>
+			</div>
+			<div class="cart-list">
+			</div>
+			<div class="cart-bottom">
+				<span class="cart-full__price">3495 ₴</span>
+				<button class="order-cart-btn">Замовити</button>
+			</div>
+		</div>
+	</div>
+
 	<footer id="footer">
 		<div class="container">
 
@@ -163,8 +217,13 @@
 				<div class="footer__left">
 					<h2>Future Tech</h2>
 					<div class="footer__left-nav">
-						<a href="#">Головна</a>
-						<a href="#">Категорії</a>
+						<a href="/">Головна</a>
+						<summary>Категорії</summary>
+						<div class="footer__categories">
+							<a href="./src/pages/category.html?category=Смартфони">Смартфони</a>
+							<a href="./src/pages/category.html?category=Планшети">Планшети</a>
+						</div>
+
 						<a href="#">Про нас</a>
 						<a href="#">Контакти</a>
 					</div>
@@ -208,14 +267,40 @@
 	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="./src/utils/cart.js" type="module"></script>
+	<script type="module" src="./src/script/home.js"></script>
 	<script>
-		var swiper = new Swiper(".mySwiper", {
+		var swiper = new Swiper(".swiper__hero", {
 			pagination: {
 				el: ".swiper-pagination",
 			},
 		});
+
+		let prodSliderConfig = {
+			slidesPerView: 2,
+			spaceBetween: 10,
+			pagination: {
+				el: ".swiper-pagination",
+				dynamicBullets: true,
+			},
+			breakpoints: {
+				760: {
+					slidesPerView: 3,
+				},
+				1024: {
+					slidesPerView: 4,
+				},
+				1260: {
+					slidesPerView: 5,
+				},
+			},
+		}
+
+		var swiper = new Swiper(".swiper__top-cards", prodSliderConfig);
+		var swiper = new Swiper(".swiper__top-phones", prodSliderConfig);
+		var swiper = new Swiper(".swiper__top-tablets", prodSliderConfig);
+
 	</script>
-	<script type="module" src="./src/script/home.js"></script>
 </body>
 
 </html>
