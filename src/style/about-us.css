@@ -29,7 +29,7 @@
 }
 
 .about__btn {
-    background-color: #2563eb;
+    background-color: #383838;
     color: #fff;
     border: none;
     padding: 12px 25px;
@@ -41,7 +41,7 @@
 }
 
 .about__btn:hover {
-    background-color: #1d4ed8;
+    background-color: #444;
 }
 
 .about__image {
