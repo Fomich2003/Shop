@@ -45,7 +45,7 @@
 }
 
 .about__image {
-    flex: 1 1 100px;
+    flex: 1 1 80px;
     max-width: 500px;
 }
 
@@ -125,7 +125,7 @@
 @media (max-width: 768px) {
     .about__intro {
         flex-direction: column;
-        padding: 20px;
+        padding: 40px;
         text-align: center;
     }
 
@@ -137,5 +137,16 @@
     .feature__item {
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+    .about__content h1 {
+        font-size: 32px;
+    }
+    .about__content p,
+    .feature__item p,
+    .about__mission p {
+        font-size: 16px;
+    }
+    .about__mission {
+        padding: 40px;
     }
 }
