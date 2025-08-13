@@ -1,3 +1,5 @@
+import { baseImageUrl } from "./constants.js";
+
 function cartMenu() {
   const cart = document.querySelector(".cart");
   const closeButton = document.querySelector(".cart-close");
@@ -88,7 +90,7 @@ function renderCart(selector, cartList, cartBottom, cartFullPrice) {
   cartList.forEach((prod) => {
     selector.innerHTML += `
       <div class="cart-item">
-        <img src="${prod.imgs[0]}" alt="">
+        <img src="${baseImageUrl + prod.imgs[0]}" alt="">
         <div class="cart-item__wrapper">
           <h3>${prod.title}</h3>
           <span class="cart-item__price">${prod.price * prod.counts}</span>

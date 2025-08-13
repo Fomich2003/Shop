@@ -4,6 +4,7 @@ import cartMenu from "../utils/cart.js";
 import burgerMenu from "../utils/burger.js";
 import initialLogoutBtn from "../utils/logout.js";
 import convertISOToDate from "../utils/convertISOToDate.js";
+import { baseImageUrl } from "../utils/constants.js";
 
 cartMenu()
 burgerMenu()
@@ -21,7 +22,7 @@ checkToken().then(() => {
                         <div class="profile__content-orders__wrapper">
                             <div class="orders__image">
                                 ${order.prodsList.map(prod => {
-                                    return `<img src="${prod.imgs[0]}" alt="${prod.title}">
+                                    return `<img src="${baseImageUrl + prod.imgs[0]}" alt="${prod.title}">
                                 `}).slice(0, 4).join("")}
                             </div>
                             <div class="orders__content">
@@ -51,7 +52,7 @@ checkToken().then(() => {
                                     ${order.prodsList.map(prod => {
                                         return `
                                         <tr>
-                                            <td><img src="${prod.imgs[0]}" alt="${prod.title}"></td>
+                                            <td><img src="${baseImageUrl + prod.imgs[0]}" alt="${prod.title}"></td>
                                             <td>${prod.title}</td>
                                             <td>${prod.price} ₴</td>
                                             <td>${prod.counts}</td>

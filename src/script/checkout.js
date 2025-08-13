@@ -1,5 +1,6 @@
 import { sendOrder } from "../service/order-service.js";
 import burgerMenu from "../utils/burger.js";
+import { baseImageUrl } from "../utils/constants.js";
 
 burgerMenu()
 
@@ -29,7 +30,7 @@ function renderCheckout() {
 	cartList.forEach(prod => {
 		checkoutList.innerHTML += `
     	<div class="checkout-item">
-								<img src="${prod.imgs[0]}" alt="">
+								<img src="${baseImageUrl + prod.imgs[0]}" alt="">
                                    <div class="checkout-item__wrapper">
 								<h3>${prod.title}</h3>
 								<p>${prod.descr}</p>

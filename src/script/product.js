@@ -5,6 +5,7 @@ import cartMenu from "../utils/cart.js";
 import renderStarRaiting from "../utils/renderStarRaiting.js";
 import createProductComment from "../service/comments-service.js";
 import convertISOToDate from "../utils/convertISOToDate.js";
+import { baseImageUrl } from "../utils/constants.js";
 
 burgerMenu()
 cartMenu()
@@ -107,7 +108,7 @@ function renderGallery(imgs, slider) {
 
   imgs.forEach(img => {
     slider.innerHTML += `<div class="swiper-slide">
-                  <img src="${img}" alt="product image"/>
+                  <img src="${baseImageUrl + img}" alt="product image"/>
                 </div>`
   });
 }

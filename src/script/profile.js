@@ -19,9 +19,9 @@ checkToken().then(() => {
 		profileContent.innerHTML = `
 								<h2>${user.name} ${user.lastname}</h2>
 								<p>Email: ${user.email}</p>
-								<p>Phone number: ${user.phone}</p>
+								<p>Телефон: ${user.phone}</p>
 								<p>Login: ${user.login}</p>
-								<p>Date of register: ${user.createdAt.slice(0, 10)}</p>
+								<p>Дата реєстрації: ${user.createdAt.slice(0, 10)}</p>
 			`
 	}
 })

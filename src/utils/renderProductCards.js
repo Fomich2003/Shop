@@ -1,4 +1,5 @@
 import getProducts from "../service/product-service.js";
+import { baseImageUrl } from "./constants.js";
 import renderStarRaiting from "./renderStarRaiting.js";
 
 function renderProductCards(wrapper, productList, isSlider = false) {
@@ -21,7 +22,7 @@ function renderProductCards(wrapper, productList, isSlider = false) {
 		tempCard.innerHTML = `<div class="product-card">
 									<div class="product-card__image">
 										<a href="/src/pages/product.html?id=${prod._id}">
-											<img src="${prod.imgs[0]}" alt="Iphone card">	
+											<img src="${baseImageUrl + prod.imgs[0]}" alt="Iphone card">	
 										</a>
 									</div>
                                     
