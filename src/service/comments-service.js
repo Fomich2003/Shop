@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000/comments'
+const BASE_URL = 'https://backend-shop-9t4u.onrender.com/comments'
 
 async function createProductComment(newComment) {
 	try {

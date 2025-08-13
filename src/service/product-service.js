@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000/products'
+const BASE_URL = 'https://backend-shop-9t4u.onrender.com/products'
 
 async function getProducts(param) {
 	try {

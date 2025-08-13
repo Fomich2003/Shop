@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000/orders'
+const BASE_URL = 'https://backend-shop-9t4u.onrender.com/orders'
 
 async function sendOrder(order) {
     try {

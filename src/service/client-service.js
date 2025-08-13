@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5000/clients'
+const BASE_URL = 'https://backend-shop-9t4u.onrender.com/clients'
 
 async function registerClient(newClient) {
 	try {
